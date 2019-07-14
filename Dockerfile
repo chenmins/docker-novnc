@@ -21,6 +21,6 @@ RUN sudo apt-get update \
 	&& cp /home/seluser/noVNC/node_modules/requirejs/require.js /home/seluser/noVNC/build \
 	&& sed -i -- "s/ps -p/ps -o pid | grep/g" /home/seluser/noVNC/utils/launch.sh \
 
-COPY novnc.conf /etc/supervisor/conf.d/novnc.conf
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 EXPOSE 8081
