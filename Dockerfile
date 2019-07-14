@@ -19,7 +19,7 @@ RUN sudo apt-get update \
 	&& npm install \
 	&& ./utils/use_require.js --as commonjs --with-app \
 	&& cp /home/seluser/noVNC/node_modules/requirejs/require.js /home/seluser/noVNC/build \
-	&& sed -i -- "s/ps -p/ps -o pid | grep/g" /home/seluser/noVNC/utils/launch.sh \
+	&& sed -i -- "s/ps -p/ps -o pid | grep/g" /home/seluser/noVNC/utils/launch.sh
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
