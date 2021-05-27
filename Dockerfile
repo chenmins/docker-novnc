@@ -18,7 +18,6 @@ RUN sudo apt-get update \
 	&& rm -rf /home/seluser/noVNC/.git \
 	&& rm -rf /home/seluser/noVNC/utils/websockify/.git \
 	&& cd /home/seluser/noVNC \
-	&& npm install npm@latest \
 	&& npm install \
 	&& ./utils/use_require.js --as commonjs --with-app \
 	&& cp /home/seluser/noVNC/node_modules/requirejs/require.js /home/seluser/noVNC/build \
