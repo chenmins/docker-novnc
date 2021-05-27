@@ -12,7 +12,7 @@ RUN sudo apt-get update \
         && sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates \
 	&& curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - \
 	&& sudo apt install nodejs \
-	&& sudo apt-get install -y git npm tzdata \
+	&& sudo apt-get install -y git tzdata \
 	&& git clone https://github.com/novnc/noVNC.git /home/seluser/noVNC \
 	&& git clone https://github.com/novnc/websockify /home/seluser/noVNC/utils/websockify \
 	&& rm -rf /home/seluser/noVNC/.git \
