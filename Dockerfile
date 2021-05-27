@@ -22,7 +22,7 @@ RUN sudo apt-get update \
 	&& ./utils/use_require.js \
 	&& cp /home/seluser/noVNC/node_modules/requirejs/require.js /home/seluser/noVNC/build \
 	&& sed -i -- "s/ps -p/ps -o pid | grep/g" /home/seluser/noVNC/utils/launch.sh \
-	&& rm /etc/localtime \
+	&& sudo rm /etc/localtime \
 	&& ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
