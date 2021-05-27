@@ -19,7 +19,7 @@ RUN sudo apt-get update \
 	&& rm -rf /home/seluser/noVNC/utils/websockify/.git \
 	&& cd /home/seluser/noVNC \
 	&& npm install \
-	&& ./utils/use_require.js --as commonjs --with-app \
+	&& ./utils/use_require.js \
 	&& cp /home/seluser/noVNC/node_modules/requirejs/require.js /home/seluser/noVNC/build \
 	&& sed -i -- "s/ps -p/ps -o pid | grep/g" /home/seluser/noVNC/utils/launch.sh \
 	&& rm /etc/localtime \
