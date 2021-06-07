@@ -21,6 +21,8 @@ RUN sudo apt-get update \
 	&& npm install \
 	&& ./utils/use_require.js \
 	&& cp /home/seluser/noVNC/node_modules/requirejs/require.js /home/seluser/noVNC/build \
+	&& mkdir /home/seluser/noVNC/vnc \
+	&& cd /home/seluser/noVNC && cp -r *.html core lib vendor utils /home/seluser/noVNC/vnc \
 	&& sed -i -- "s/ps -p/ps -o pid | grep/g" /home/seluser/noVNC/utils/launch.sh \
 	&& sudo rm /etc/localtime \
 	&& sudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
