@@ -1,0 +1,11 @@
+! If you're looking for settings to configure, they won't be saved here until
+! you change something in the fluxbox configuration menu.
+
+session.menuFile:	~/.fluxbox/menu
+session.keyFile: ~/.fluxbox/keys
+session.styleFile: /usr/share/fluxbox/styles//ubuntu-light
+session.configVersion:	13
+session.screen0.toolbar.widthPercent: 100
+session.screen0.strftimeFormat: %Y-%m-%d, %02k:%M:%S
+session.screen0.toolbar.tools: workspacename,iconbar,clock,systemtray
+session.screen0.workspaceNames: 通用技术
